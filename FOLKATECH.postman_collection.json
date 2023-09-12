@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "1981b3cb-d34a-42e7-90a9-60d86d5127ba",
+		"name": "FOLKATECH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21736836",
+		"_collection_link": "https://red-eclipse-80450.postman.co/workspace/Coding-Collectives~20d17e3a-f74d-4b08-89ba-2d32b7407cd5/collection/21736836-1981b3cb-d34a-42e7-90a9-60d86d5127ba?action=share&source=collection_link&creator=21736836"
+	},
+	"item": [
+		{
+			"name": "HOME",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2023/api/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2023/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaDepan\": \"Alex\",\r\n    \"namaBelakang\": \"Al Munjabi\",\r\n    \"namaToko\": \"Jabi Shop\",\r\n    \"noTelp\": \"081287987023\",\r\n    \"email\": \"alex@gmail.com\",\r\n    \"password\": \"alex123\",\r\n    \"confirmPassword\": \"alex123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2023/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DETAIL PRODUCTS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYW1hRGVwYW4iOiJRV1J0YVc1cGMzUnlZWFJ2Y2c9PSIsImlhdCI6MTY5NDU1Njc2NiwiZXhwIjoxNjk0NTYzOTY2fQ.8QRjLMoznE40_BcnkYSjGXvsqSPPrFVK0Zce71zeWRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2023/api/v1/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST PRODUCTS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYW1hRGVwYW4iOiJRV1J0YVc1cGMzUnlZWFJ2Y2c9PSIsImlhdCI6MTY5NDU2MDc4MiwiZXhwIjoxNjk0NTY3OTgyfQ.ejwtg7CWXM-PkaCXVsfTsZSuEGhfzMQT8C7vjXX1L6o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2023/api/v1/list-product?page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1",
+						"list-product"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
